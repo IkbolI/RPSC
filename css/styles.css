@@ -1,0 +1,356 @@
+body {
+	color: white;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-weight: 700;
+}
+
+ul {
+	list-style-type: none;
+	line-height: 1em;
+	margin-bottom: 0px;
+	padding-left: 15px;
+}
+
+.desktop {
+	width: 1366px;
+	background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));	
+}
+
+/*This is Rules Pop Up part, visible after button RULES is pressed*/
+
+.rulesPopUp {
+	position: absolute;
+	z-index: 10;
+	margin-top: 15%;
+	margin-left: 31%;
+}
+
+.rowPopUp {
+	position: absolute;
+	z-index: 10;
+	background-color: white;
+	color: hsl(229, 25%, 31%);
+	border-color: white;
+	border-radius: 8px;
+	border-width: 2px;
+	font-size: 25px;
+	padding: 30px 30px;	
+	visibility: hidden;
+}
+
+.rulesPopUpInside {
+	text-align: center;
+	padding-top: 25px;
+}
+
+.colIconClose {
+	text-align: right;
+}
+
+.btnIconClose {
+	border: none;
+	background-color: white;
+}
+
+/*This is SCORE shown part*/
+
+.column1 {
+	font-size: 27px;
+}
+
+.rowOutside1 {
+	padding-top: 2%;
+}
+
+.rowInside {
+	border-color: hsl(217, 16%, 45%);
+	border-style: solid;
+	border-radius: 8px;
+	border-width: 2px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	align-items: center;
+}
+
+.scoreContainer {
+	background-color: white;
+	color: hsl(229, 25%, 31%);
+	border-radius: 8px;
+	padding-top: 3%;
+	width: content;	
+	line-height: 2em;
+	height: 85px;
+}
+
+.scoreResult {
+	font-size: 50px;
+	text-align: center;
+}
+
+.scoreScreen {
+	font-size: 12px;
+	margin-bottom: 0px;	
+	text-align: center;
+	color: hsl(229, 64%, 46%);
+}
+
+/*This is Game Played Part*/
+
+/*This part is when player make decision!*/
+
+.gamePartDiv {
+	height: 550px;
+}
+
+.bgTriangle2Svg {
+	position: absolute;
+	z-index: 2;
+}
+
+.imageRules2Svg {
+	position: absolute;
+	z-index: 3;
+	transform: scale(1.7, 1.7);
+}
+
+/*This is part when player and computer show their choices*/
+
+.playersShowChoices {
+	text-align: center;
+	visibility: hidden;
+	display: none;
+	padding-top: 50px;
+	font-size: 25px;
+}
+
+.playerPickedResult {
+	transform: scale(2.5, 2.5);
+	margin-top: 40%;
+	margin-left: 75%;
+}
+
+.housePickedResult {
+	transform: scale(2.5, 2.5);
+	margin-top: 40%;
+	margin-left: 80%;
+}
+
+/*This is part when results are shown*/
+
+.gameResult {
+	text-align: center;
+	visibility: hidden;
+	display: none;
+	padding-top: 50px;
+	font-size: 25px;
+}
+
+.showGameResult {
+	padding-top: 120px;
+	font-size: 50px;
+}
+
+.pShowGameResult {
+	margin-bottom: 0px;
+}
+
+.btnPlayAgain {
+	color: red;
+	font-size: 15px;
+	border-radius: 8px;
+	border-width: 2px;
+	padding: 10px 60px;
+	background-color: white;
+	position: relative;
+	z-index: 9;
+}
+
+.btnPlayAgain:hover {
+	background-color: white;
+	border-color: white;
+	color: hsl(229, 64%, 46%);
+}
+
+.btnPlayAgain:active,
+.btnPlayAgain:focus,
+[role="button"][aria-pressed="true"] {
+    box-shadow: none;
+}
+
+/*This is RULES Button part*/
+
+.colBtn {
+	text-align: center;	
+}
+
+.btnRules {
+	color: white;
+	font-size: 12px;
+	border-color: hsl(217, 16%, 45%);
+	border-radius: 8px;
+	border-width: 2px;
+	padding-left: 24px;
+	padding-right: 24px;	
+}
+
+.btnRules:hover {
+	background-color: white;
+	border-color: white;
+	color: hsl(229, 64%, 46%);
+}
+
+.btnRules:active,
+.btnRules:focus,
+[role="button"][aria-pressed="true"] {
+    box-shadow: none;
+}
+
+/*MOBILE VERSION*/
+
+.mobile {
+	width: 375px;
+	background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));	
+	padding: 0px;
+	padding-top: 1%;
+}
+
+.rowMainMobile {
+	margin: 2%;
+}
+
+/*This is SCORE shown part*/
+
+.rowScoreMobile {
+	border-color: hsl(217, 16%, 45%);
+	border-style: solid;
+	border-radius: 8px;
+	border-width: 2px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	align-items: center;
+	margin: 2%;
+}
+
+.column1Mobile {
+	font-size: 25px;
+}
+
+.scoreContainerMobile {
+	background-color: white;
+	color: hsl(229, 25%, 31%);
+	border-radius: 8px;
+	padding-top: 3%;
+	width: content;	
+	line-height: 2em;
+	height: 85px;
+}
+
+.scoreResultMobile {
+	font-size: 50px;
+	text-align: center;
+}
+
+.scoreScreenMobile {
+	font-size: 12px;
+	margin-bottom: 0px;	
+	text-align: center;
+	color: hsl(229, 64%, 46%);
+}
+
+/*This is Game Played Part*/
+
+/*This part is when player make decision!*/
+
+.gamePartDivMobile {
+	height: 400px;
+	position: relative;
+	padding-top: 50px;
+	padding-left: 30px;
+}
+
+.bgTriangle2SvgMobile {
+	position: absolute;
+	z-index: 2;
+	transform: scale(0.8, 0.8);
+	height: 350px;
+}
+
+.imageRules2SvgMobile {
+	position: absolute;
+	z-index: 3;
+	transform: scale(1.1, 1.1);
+	height: 300px;
+}
+
+/*This is part when player and computer show their choices*/
+
+.playersShowChoicesMobile {
+	text-align: center;
+	padding-top: 10px;
+	font-size: 18px;
+	display: none;
+	visibility: hidden;
+}
+
+.playerPickedResultMobile {
+	margin-top: 20%;
+}
+
+.housePickedResultMobile {
+	margin-top: 20%;	
+}
+
+
+.btnPlayAgainMobile {
+	color: red;
+	font-size: 15px;
+	border-radius: 8px;
+	border-width: 2px;
+	padding: 10px 60px;
+	background-color: white;
+	position: relative;
+	z-index: 9;
+	margin-left: 25%;
+	width: 200px;
+	display: none;
+}
+
+.btnPlayAgainMobile:hover {
+	background-color: white;
+	border-color: white;
+	color: hsl(229, 64%, 46%);
+}
+
+.btnPlayAgainMobile:active,
+.btnPlayAgainMobile:focus,
+[role="button"][aria-pressed="true"] {
+    box-shadow: none;
+}
+
+.pShowGameResultMobile {
+	text-align: center;
+}
+
+.btnRulesMobile {
+	color: white;
+	font-size: 12px;
+	border-color: hsl(217, 16%, 45%);
+	border-radius: 8px;
+	border-width: 2px;
+	padding-left: 24px;
+	padding-right: 24px;
+	margin-bottom: 10%;
+	margin-top: 10%;	
+}
+
+.btnRulesMobile:hover {
+	background-color: white;
+	border-color: white;
+	color: hsl(229, 64%, 46%);
+}
+
+.btnRulesMobile:active,
+.btnRulesMobile:focus,
+[role="button"][aria-pressed="true"] {
+    box-shadow: none;
+}

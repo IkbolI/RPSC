@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap styling -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+  <!-- CSS styling -->
+
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+ 
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="desktop container-fluid">
+
+<!-- This is Rules Pop Up part, visible after button RULES is pressed -->
+
+    <div class="rulesPopUp">
+      <div class="row">
+        <div class="col-4">
+        
+        </div>
+        <div class="col-4">
+        <div class="row rowPopUp">
+          <div class="col-6">
+            RULES
+          </div>
+          <div class="col-6 colIconClose">
+            <button class="btnIconClose">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/>
+              </svg>
+            </button>            
+          </div>
+          <div class="rulesPopUpInside">
+            <svg xmlns="http://www.w3.org/2000/svg" width="304" height="270">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="#B1B4C5" rx="53.189" ry="54.815"/>
+                <ellipse cx="53.189" cy="52.385" fill="url(#a)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                 <ellipse cx="40.832" cy="41.044" fill="#E1E4ED" rx="40.832" ry="41.044"/>
+                  <path fill="#8A90AC" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+                </g>
+              <g transform="translate(196)">
+                <ellipse cx="53.686" cy="54.815" fill="#B1B4C5" rx="53.686" ry="54.815"/>
+                <ellipse cx="53.686" cy="52.385" fill="url(#b)" rx="53.686" ry="52.385"/>
+                 <g transform="translate(12.473 12.421)">
+                  <ellipse cx="41.214" cy="41.044" fill="#E1E4ED" rx="41.214" ry="41.044"/>
+                 <path fill="#8A90AC" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+                </g>
+              </g>
+              <g transform="translate(98 160)">
+                <ellipse cx="53.686" cy="54.815" fill="#B1B4C5" rx="53.686" ry="54.815"/>
+                <ellipse cx="53.686" cy="52.385" fill="url(#b)" rx="53.686" ry="52.385"/>
+                <g transform="translate(12.473 12.421)">
+                  <ellipse cx="41.214" cy="41.044" fill="#E1E4ED" rx="41.214" ry="41.044"/>
+                  <path fill="#8A90AC" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+                </g>
+              </g>
+              <text fill="#B1B4C5" font-family="BarlowSemiCondensed-Bold, Barlow Semi Condensed" font-size="13" font-style="condensed" font-weight="bold"><tspan x="134" y="31">BEATS</tspan>
+              </text>
+              <text fill="#B1B4C5" font-family="BarlowSemiCondensed-Bold, Barlow Semi Condensed" font-size="13" font-style="condensed" font-weight="bold"><tspan x="40" y="147">BEATS</tspan>
+              </text>
+              <text fill="#B1B4C5" font-family="BarlowSemiCondensed-Bold, Barlow Semi Condensed" font-size="13" font-style="condensed" font-weight="bold"><tspan x="235" y="147">BEATS</tspan>
+              </text>
+              <g fill="#B1B4C5" transform="matrix(-1 0 0 1 177 39)">
+                <rect width="50" height="4" y="10" rx="2"/>
+                <path d="M41.963 2.015l8.59 8.728c.716.727.71 1.896-.013 2.616a1.833 1.833 0 01-2.6-.013l-8.59-8.728a1.855 1.855 0 01.013-2.616 1.833 1.833 0 012.6.013z"/>
+                <path d="M39.35 19.382l8.59-8.728a1.833 1.833 0 012.6-.013c.723.72.729 1.889.013 2.616l-8.59 8.728a1.833 1.833 0 01-2.6.013 1.855 1.855 0 01-.013-2.616z"/>
+              </g>
+              <g fill="#B1B4C5" transform="scale(1 -1) rotate(-55 -82.574 -131.195)">
+                <rect width="50" height="4" y="10" rx="2"/>
+                <path d="M41.963 2.015l8.59 8.728c.716.727.71 1.896-.013 2.616a1.833 1.833 0 01-2.6-.013l-8.59-8.728a1.855 1.855 0 01.013-2.616 1.833 1.833 0 012.6.013z"/>
+               <path d="M39.35 19.382l8.59-8.728a1.833 1.833 0 012.6-.013c.723.72.729 1.889.013 2.616l-8.59 8.728a1.833 1.833 0 01-2.6.013 1.855 1.855 0 01-.013-2.616z"/>
+              </g>
+              <g fill="#B1B4C5" transform="rotate(-55 240.022 -103.651)">
+                <rect width="50" height="4" y="10" rx="2"/>
+                <path d="M41.963 2.015l8.59 8.728c.716.727.71 1.896-.013 2.616a1.833 1.833 0 01-2.6-.013l-8.59-8.728a1.855 1.855 0 01.013-2.616 1.833 1.833 0 012.6.013z"/>
+               <path d="M39.35 19.382l8.59-8.728a1.833 1.833 0 012.6-.013c.723.72.729 1.889.013 2.616l-8.59 8.728a1.833 1.833 0 01-2.6.013 1.855 1.855 0 01-.013-2.616z"/>
+             </g>
+            </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-4">
+        
+      </div>
+    </div>
+      </div>  
+
+<!-- This is SCORE shown part -->
+
+    <div class="row rowOutside1">
+      <div class="col-3">
+        
+      </div>
+      <div class="col-6">
+        
+          <div class="row rowInside">
+            <div class="column1 col">
+              <ul>
+                <li>
+                  ROCK
+                </li>
+                <li>
+                  PAPER
+                </li>
+                <li>
+                  SCISSORS
+                </li>
+              </ul>
+            </div>
+            <div class="column2 col-auto">
+              <div class="container scoreContainer">
+                <p class="scoreScreen">S C O R E</p>
+                <p class="scoreResult"></p>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Score
+          Rules
+
+          You Picked
+          The House Picked
+
+          You Win
+          You Lose
+
+          Play Again -->
+      </div>  
+      <div class="col-3">
+        
+      </div>
+    </div> 
+
+<!-- This is Game Played Part -->
+
+      
+    <!-- This part is when player make decision! -->
+
+      <div class="gamePartDiv d-flex align-items-center justify-content-center" >
+        <svg class="bgTriangle2Svg align-baseline" xmlns="http://www.w3.org/2000/svg" width="305" height="277">
+          <path fill="none" stroke="#000" stroke-width="15" d="M291.5 7.5H4.574c3.119 0 52.416 84.667 147.892 254L291.5 7.5z" opacity=".3"/>
+        </svg>
+    
+        <svg class="imageRules2Svg align-baseline" xmlns="http://www.w3.org/2000/svg" width="304" height="270">
+          <defs>
+            <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+            <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+          </defs>
+          <g fill="none" fill-rule="evenodd">
+            <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815" onclick="gameStarted('paper')"/> 
+            <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385" onclick="gameStarted('paper')"/>
+            <g transform="translate(12.357 12.421)">
+              <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044" onclick="gameStarted('paper')"/>
+              <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000" onclick="gameStarted('paper')"/>
+              <path onclick="gameStarted('paper')" fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+          </g>
+          <g transform="translate(196)">
+              <ellipse onclick="gameStarted('scissors')" cx="53.686" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.686" ry="54.815"/>
+              <ellipse onclick="gameStarted('scissors')" cx="53.686" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.686" ry="52.385"/>
+            <g transform="translate(12.473 12.421)">
+              <ellipse onclick="gameStarted('scissors')" cx="41.214" cy="41.044" fill="#B1B4C5" rx="41.214" ry="41.044"/>
+              <ellipse onclick="gameStarted('scissors')" cx="41.214" cy="43.000" fill="#E1E4ED" rx="41.214" ry="39.000"/>
+              <path onclick="gameStarted('scissors')" fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+            </g>
+          </g>
+        <g transform="translate(98 160)">
+          <ellipse onclick="gameStarted('rock')" cx="53.686" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.686" ry="54.815"/>
+          <ellipse onclick="gameStarted('rock')" cx="53.686" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.686" ry="52.385"/>
+          <g transform="translate(12.473 12.421)">
+              <ellipse onclick="gameStarted('rock')" cx="41.214" cy="41.044" fill="#B1B4C5" rx="41.214" ry="41.044"/>
+              <ellipse onclick="gameStarted('rock')" cx="41.214" cy="43.000" fill="#E1E4ED" rx="41.214" ry="39.000"/>
+              <path onclick="gameStarted('rock')" fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+          </g>
+        </g>
+      </svg>
+      </div>
+
+    <!-- This is part when player and computer show their choices -->
+
+      <div class="row playersShowChoices">
+        <div class="col-3">
+        
+        </div>
+        <div class="col-3">
+          <p>
+            YOU PICKED
+          </p>
+           
+          <svg class="playerPaper playerPickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="playerScissors playerPickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="playerRock playerPickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs> 
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+        </div>
+
+        <div class="col-3">
+          <P>
+            THE HOUSE PICKED
+          </P>
+             
+          <svg class="housePaper housePickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="houseScissors housePickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="houseRock housePickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs> 
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+        </div>
+
+        <div class="col-3">
+        
+        </div>
+      </div>
+
+    <!-- This is part when results shown -->
+
+      <div class="row gameResult">
+        <div class="col-2">
+        
+        </div>
+        <div class="col-3">
+          <p>
+            YOU PICKED
+          </p>
+           
+          <svg class="playerPaperGame playerPickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="playerScissorsGame playerPickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="playerRockGame playerPickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs> 
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+        </div>
+
+        <div class="col-2 showGameResult">
+          <p class="pShowGameResult">
+            
+          </P>
+          <button type="button" class="btn btnPlayAgain">PLAY AGAIN</button>          
+        </div>
+
+        <div class="col-3">
+          <P>
+            THE HOUSE PICKED
+          </P>
+             
+          <svg class="housePaperGame housePickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="houseScissorsGame housePickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs>
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+
+          <svg class="houseRockGame housePickedResult">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+              <defs> 
+                <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <ellipse cx="53.189" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.189" ry="54.815"/> 
+                <ellipse cx="53.189" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.189" ry="52.385"/>
+                <g transform="translate(12.357 12.421)">
+                  <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                  <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                  <path fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+                </g>
+              </g>
+            </svg>
+          </svg>
+        </div>
+
+        <div class="col-2">
+        
+        </div>
+      </div>
+
+<!-- This is RULES Button part -->
+
+    <div class="row justify-content-end">
+      <div class="colBtn col-2">
+        <button type="button" class="btn btnRules">R U L E S</button>
+      </div>
+    </div>
+
+<!-- This part about Challange and Developer -->
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Ikbolzhon Isakov</a>.
+    </div>
+ 
+  </div>
+
+  <div class="mobile container-fluid">
+
+<!-- This is Rules Pop Up part, visible after button RULES is pressed -->
+    
+    <div class="rowMainMobile">
+
+ <!-- This is SCORE shown part -->
+
+      <div class="row rowScoreMobile">
+        <div class="column1Mobile col">
+          <ul>
+            <li>
+              ROCK
+            </li>
+            <li>
+              PAPER
+            </li>
+            <li>
+              SCISSORS
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <div class="container scoreContainerMobile">
+            <p class="scoreScreenMobile">S C O R E</p>
+            <p class="scoreResultMobile"></p>
+          </div>              
+        </div>
+      </div>
+
+      <div class="row gamePartDivMobile">
+        
+        <svg class="bgTriangle2SvgMobile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="305" height="277">
+            <path fill="none" stroke="#000" stroke-width="15" d="M291.5 7.5H4.574c3.119 0 52.416 84.667 147.892 254L291.5 7.5z" opacity=".3"/>
+          </svg>
+        </svg>
+
+        <svg class="imageRules2SvgMobile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="304" height="270">
+            <defs>
+              <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+              <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+            </defs>
+          <g fill="none" fill-rule="evenodd">
+            <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815" onclick="gameStartedMobile('paperMobile')"/> 
+            <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385" onclick="gameStartedMobile('paperMobile')"/>
+            <g transform="translate(12.357 12.421)">
+              <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044" onclick="gameStartedMobile('paperMobile')"/>
+              <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000" onclick="gameStartedMobile('paperMobile')"/>
+              <path onclick="gameStartedMobile('paperMobile')" fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+            </g>
+          <g transform="translate(196)">
+              <ellipse onclick="gameStartedMobile('scissorsMobile')" cx="53.686" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.686" ry="54.815"/>
+              <ellipse onclick="gameStartedMobile('scissorsMobile')" cx="53.686" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.686" ry="52.385"/>
+              <g transform="translate(12.473 12.421)">
+              <ellipse onclick="gameStartedMobile('scissorsMobile')" cx="41.214" cy="41.044" fill="#B1B4C5" rx="41.214" ry="41.044"/>
+              <ellipse onclick="gameStartedMobile('scissorsMobile')" cx="41.214" cy="43.000" fill="#E1E4ED" rx="41.214" ry="39.000"/>
+              <path onclick="gameStartedMobile('scissorsMobile')" fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+              </g>
+            </g>
+          <g transform="translate(98 160)">
+            <ellipse onclick="gameStartedMobile('rockMobile')" cx="53.686" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.686" ry="54.815"/>
+            <ellipse onclick="gameStartedMobile('rockMobile')" cx="53.686" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.686" ry="52.385"/>
+            <g transform="translate(12.473 12.421)">
+              <ellipse onclick="gameStartedMobile('rockMobile')" cx="41.214" cy="41.044" fill="#B1B4C5" rx="41.214" ry="41.044"/>
+              <ellipse onclick="gameStartedMobile('rockMobile')" cx="41.214" cy="43.000" fill="#E1E4ED" rx="41.214" ry="39.000"/>
+              <path onclick="gameStartedMobile('rockMobile')" fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+              </g>
+            </g>
+          </svg>
+        </svg>
+
+        <div class="row playersShowChoicesMobile">
+        
+          <div class="col-6">
+            <p>
+              YOU PICKED
+            </p>
+           
+            <svg class="playerPaperMobile playerPickedResultMobile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+                <defs>
+                 <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                 <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815"/> 
+                  <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385"/>
+                  <g transform="translate(12.357 12.421)">
+                    <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                    <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                    <path fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+
+            <svg class="playerScissorsMobile playerPickedResultMobile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+                <defs>
+                  <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <ellipse cx="53.189" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.189" ry="54.815"/> 
+                  <ellipse cx="53.189" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.189" ry="52.385"/>
+                  <g transform="translate(12.357 12.421)">
+                    <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                    <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                    <path fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+
+            <svg class="playerRockMobile playerPickedResultMobile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+                <defs> 
+                  <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <ellipse cx="53.189" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.189" ry="54.815"/> 
+                  <ellipse cx="53.189" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.189" ry="52.385"/>
+                  <g transform="translate(12.357 12.421)">
+                    <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                    <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                    <path fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+          </div>
+
+          <div class="col-6">
+            <P>
+              THE HOUSE PICKED
+            </P>
+             
+            <svg class="housePaperMobile housePickedResultMobile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+                <defs>
+                  <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <ellipse cx="53.189" cy="54.815" fill="hsl(230, 89%, 55%)" rx="53.189" ry="54.815"/> 
+                  <ellipse cx="53.189" cy="52.385" fill="hsl(230, 89%, 65%)" rx="53.189" ry="52.385"/>
+                  <g transform="translate(12.357 12.421)">
+                    <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                    <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                    <path fill="#3B4262" fill-rule="nonzero" d="M56.697 30.417a2.125 2.125 0 00-.904-.146c-.417.03-.755.201-.955.481-1.177 1.666-2.141 4.81-2.919 7.337-.357 1.169-.836 2.733-1.183 3.475-.362-2.08.047-9.697.206-12.63l.002-.047c.11-2.038.125-2.396.1-2.553-.174-1.118-.618-1.852-1.319-2.18-.708-.333-1.629-.186-2.62.417-.497.303-.635 1.345-1.061 6.067l-.002.02c-.235 2.595-.776 8.568-1.441 9.563-.75-1.392-1.784-9.3-2.23-12.722-.312-2.397-.494-3.774-.616-4.19-.257-.87-1.343-1.611-2.418-1.653-.895-.044-1.629.415-1.98 1.214-.655.736-.423 3.179.302 8.964.344 2.754 1.056 8.441.608 9.08-.893-.099-2.427-3.661-4.559-10.592-.598-1.942-.783-2.525-.967-2.78-.362-.891-1.593-1.578-2.696-1.5a2.314 2.314 0 00-.277.036c-.578.116-1.896.653-1.615 3.13.779 3.435 1.624 5.957 2.445 8.405l.016.05c.491 1.465.955 2.85 1.387 4.388 1.016 3.63.621 5.882.616 5.907-.034.232-.105.374-.211.423a.405.405 0 01-.143.033c-.322.023-.805-.193-1.055-.333-.568-1.098-3.4-6.33-5.967-7.055L25.15 41l-.093.008c-.942.09-1.634.45-2.057 1.068-.67.978-.393 2.224-.325 2.474l.038.09c.02.037 2.079 3.825 2.397 5.587.275 1.511 1.696 3.148 2.838 4.464l.047.054c.373.43.695.802.948 1.146 3.316 3.492 8.558 6.428 8.601 6.452.654.487 1.018.958 1.056 1.363a.595.595 0 01-.117.43l-.114.12.725.711 13.832-.98.59-2.73c1.823-7.705 1.442-14.275 1.436-14.319.007-.242.518-2.58.93-4.468l.011-.048c.82-3.763 1.838-8.444 2.034-10.225.085-.761-.398-1.46-1.23-1.779z"/>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+
+            <svg class="houseScissorsMobile housePickedResultMobile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+                <defs>
+                  <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <ellipse cx="53.189" cy="54.815" fill="hsl(39, 89%, 40%)" rx="53.189" ry="54.815"/> 
+                  <ellipse cx="53.189" cy="52.385" fill="hsl(40, 84%, 53%)" rx="53.189" ry="52.385"/>
+                  <g transform="translate(12.357 12.421)">
+                    <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                    <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                    <path fill="#3B4262" fill-rule="nonzero" d="M30.455 40.692l4.451-6.234c-1.85-.307-5.248-.375-8.031 2.397-4.388 4.37-6.165 13.809-6.535 16.093l11.15 11.105c2.008-.17 10.896-1.353 19.46-9.881.09-.184 2.177-1.72.471-3.418-.814-.81-2.162-.796-2.993.033a1.051 1.051 0 01-1.497.015 1.04 1.04 0 01.015-1.49l3.026-3.014c1.538-1.532.089-4.116-2.058-3.495l-2.477 2.112a1.065 1.065 0 01-1.497-.103c-.384-.443-.302-1.114.135-1.492 8.654-7.562 7.39-6.65 12.958-11.848 2.08-1.725-.536-4.776-2.586-3.03L40.978 40.506a1.051 1.051 0 01-1.378-.015c-.445-.383-.455-.934-.164-1.37l9.395-14.545c1.373-1.852-1.33-3.91-2.776-2.042L32.164 41.881a1.05 1.05 0 01-1.47.255 1.02 1.02 0 01-.24-1.444z"/>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+
+            <svg class="houseRockMobile housePickedResultMobile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+                <defs> 
+                  <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFF" stop-opacity=".097"/><stop offset="100%" stop-color="#FFF" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <ellipse cx="53.189" cy="54.815" fill="hsl(349, 71%, 45%)" rx="53.189" ry="54.815"/> 
+                  <ellipse cx="53.189" cy="52.385" fill="hsl(349, 70%, 56%)" rx="53.189" ry="52.385"/>
+                  <g transform="translate(12.357 12.421)">
+                    <ellipse cx="40.832" cy="41.044" fill="#B1B4C5" rx="40.832" ry="41.044"/>
+                    <ellipse cx="40.832" cy="43.000" fill="#E1E4ED" rx="40.832" ry="39.000"/>
+                    <path fill="#3B4262" fill-rule="nonzero" d="M57.179 35.15c-.475-5.997-7.208-5.385-7.208-5.385-2.842-5.01-7.281-1.381-7.281-1.381-3.41-4.911-7.687-.36-7.687-.36-7.373-.796-7.087 5.234-7.087 5.234-.173 1.917 1.04 7.847 1.04 7.847-1.094-3.418-3.467-.581-3.467-.581-2.917 4.502-.721 6.967-.721 6.967 3.947 4.626 12.357 10.18 12.357 10.18 3.046 1.745 1.757 3.3 1.757 3.3l18.42-3.044.424-3.494c2.8-8.472-.547-19.284-.547-19.284z"/>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <p class="pShowGameResultMobile">
+            
+        </P>
+        <button type="button" class="btn btnPlayAgainMobile">PLAY AGAIN</button>          
+      </div>
+
+      <div class="row">
+        <button type="button" class="btn btnRulesMobile">R U L E S</button>
+      </div>
+      
+    </div>
+
+
+  </div>
+  <script type="text/javascript" src="index.js" ></script>
+</body>
+</html>
